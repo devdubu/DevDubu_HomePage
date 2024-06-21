@@ -1,3 +1,5 @@
+import path from 'path';
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   runtimeConfig: {
@@ -41,9 +43,15 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
+  primevue: {
+    options: {
+      unstyled: false
+    },
+    importPT: { from: path.resolve(__dirname, './presets/aura/') }      //import and apply preset   
+  },
   pinia: {
     storesDirs: ['./stores/**'],
   },
-  modules: ["@nuxt/eslint", "@nuxtjs/tailwindcss","@pinia/nuxt"],
+  modules: ["@nuxt/eslint", "@nuxtjs/tailwindcss", "@pinia/nuxt", "nuxt-primevue"],
   
 })
