@@ -28,7 +28,7 @@
         <p class="text-sm leading-6 font-semibold text-gray-900 ml-2 hidden sm:block">{{ post.author.name }}</p>
       </div>
     </div>
-    <div class="m-5">
+    <div class="m-5 p-5 w-full min-h-svh">
       {{ post.content }}
     </div>
     <div class="max-w-3xl mx-auto">
@@ -38,7 +38,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ChevronRightIcon, HomeIcon, PencilIcon } from '@heroicons/vue/20/solid'
+import { ChevronRightIcon, HomeIcon } from '@heroicons/vue/20/solid'
 import Comment from '~/components/Comment.vue';
 
 const pages = [

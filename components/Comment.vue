@@ -27,7 +27,7 @@
               </div>
             </div>
             <div class="flex-shrink-0">
-              <button type="submit" class="inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Post</button>
+              <button type="submit" class="inline-flex items-center rounded-md bg-main-color-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-main-color-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-main-color">Post</button>
             </div>
           </div>
         </form>

@@ -34,7 +34,7 @@ import Notification from '~/components/Notification.vue';
 const infoToast = { severity: 'info', summary: '정보', detail: '정보 토스트 샘플', life: 3000 }
 const successToast = { severity: 'success', summary: '성공', detail: '성공 토스트 샘플', life: 3000 }
 const warnToast = { severity: 'warning', summary: '경고', detail: '경고 토스트 샘플', life: 3000 }
-const errorToast = { severity: 'error', summary: '에러', detail: '에러 토스트 샘플', life: 3000 }
+const errorToast = { severity: 'danger', summary: '에러', detail: '에러 토스트 샘플', life: 3000 }
 const secondaryToast = { severity: 'secondary', summary: '화이트', detail: '화이트 토스트 샘플', life: 3000 }
 const contrastToast = { severity: 'contrast', summary: '블랙', detail: '블랙 토스트 샘플', life: 3000 }
 

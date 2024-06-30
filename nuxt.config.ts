@@ -47,7 +47,8 @@ export default defineNuxtConfig({
     options: {
       unstyled: false
     },
-    importPT: { from: path.resolve(__dirname, './presets/aura/') }      //import and apply preset   
+    importPT: { from: path.resolve(__dirname, './presets/aura/') },      //import and apply preset
+
   },
   pinia: {
     storesDirs: ['./stores/**'],

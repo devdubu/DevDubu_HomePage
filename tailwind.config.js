@@ -12,6 +12,9 @@ module.exports = {
     extend: {
       colors: {
           primary: 'rgb(var(--primary))',
+          'main-color-500' : '#E5D96A',
+          'main-color-400' : '#E4DC98',
+          'main-color-600' : '#E2D34D',
           'primary-inverse': 'rgb(var(--primary-inverse))',
           'primary-hover': 'rgb(var(--primary-hover))',
           'primary-active-color': 'rgb(var(--primary-active-color))',
