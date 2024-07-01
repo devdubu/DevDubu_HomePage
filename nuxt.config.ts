@@ -53,6 +53,6 @@ export default defineNuxtConfig({
   pinia: {
     storesDirs: ['./stores/**'],
   },
-  modules: ["@nuxt/eslint", "@nuxtjs/tailwindcss", "@pinia/nuxt", "nuxt-primevue"],
+  modules: ["@nuxt/eslint", "@nuxtjs/tailwindcss", "@pinia/nuxt", "nuxt-primevue", '@nuxt/test-utils/module'],
   
 })
