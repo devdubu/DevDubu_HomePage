@@ -24,7 +24,7 @@
     <div class="w-full sm:m-5 mt-5 flex justify-between">
       <h1 class="text-3xl font-bold leading-tight tracking-tight text-gray-900">{{ post.title }}</h1>
       <div class="flex justify-center items-center sm:mr-5">
-        <img :src="post.author.imageUrl" class="h-10 w-10 rounded-full bg-gray-50" />
+        <img :src="post.author.imageUrl" class="h-10 w-10 rounded-full bg-gray-50" >
         <p class="text-sm leading-6 font-semibold text-gray-900 ml-2 hidden sm:block">{{ post.author.name }}</p>
       </div>
     </div>

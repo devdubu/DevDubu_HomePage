@@ -1,5 +1,11 @@
 <template>
   <NuxtLayout>
-    <NuxtPage />
+    <ConfirmDialog/>
+      <Toast />
+    <NuxtPage/>
   </NuxtLayout>
 </template>
+<script>
+import 'primeicons/primeicons.css';
+import ConfirmDialog from 'primevue/confirmdialog';
+</script>
