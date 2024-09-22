@@ -1,6 +1,5 @@
 <template>
   <div>
-    
     <div class="flex justify-between items-center mb-5">
       <div class="flex-1 mr-10">
         <input v-model='title' type="text" class=" w-full h-14 border-b-2 text-2xl p-2" placeholder="제목을 입력하세요">
@@ -18,11 +17,15 @@
       </div>
     </div>
     <div>
-      <MdEditor v-model="text" language="us-US"/>
+      <ClientOnly>
+        <MdEditor v-model="text" language="us-US"/>
+      </ClientOnly>
+      
     </div>
     <div class="flex w-full justify-end items-center mt-8"> 
-      <ConfirmButton :conf='cancelBtnConfig' />
-      <ConfirmButton :conf='saveBtnConfig' />
+      <CustomButton :conf='customConf'/>
+      <ConfirmButton :conf='cancelBtnConfig' @accept-action='cancelPostData' />
+      <ConfirmButton :conf='saveBtnConfig' @accept-action='savePostData'/>
     </div>
   </div>
 </template>
@@ -32,6 +35,7 @@ import { MdEditor } from 'md-editor-v3';
 import 'md-editor-v3/lib/style.css';
 import MultiSelect from 'primevue/multiselect';
 import Button from 'primevue/button';
+import CustomButton from '~/components/CustomButton.vue';
 
 
 
@@ -74,6 +78,20 @@ const cancelBtnConfig = {
   
 }
 
+const customConf = {
+  label: '저장',
+  color: [
+    {
+      colorSet: 'main',
+      location: 'background'
+    },
+    {
+      colorSet: 'white',
+      location: 'text'
+    }
+  ],
+  size: 'm'
+}
 
 const category = [
   {
@@ -83,6 +101,23 @@ const category = [
     name: '백엔드'
   }
 ]
+
+// 저장 로직
+const savePostData  = () =>{
+  
+  const postData = {
+    title: title.value,
+    text: text.value,
+    category: seletedCategory.value
+  }
+
+  console.log(postData)
+}
+
+const cancelPostData = () =>{
+  navigateTo('/')
+}
+
 
 </script>
 
