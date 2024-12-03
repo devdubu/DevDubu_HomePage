@@ -39,6 +39,25 @@ const pages = [
   { name: 'Project Nero', href: '#', current: true },
 ]
 
+const requestMockServer = async () => {
+  const requestUrl = 'http://localhost:8080'
+
+  const postResponse = await $fetch(`${requestUrl}/post`)
+
+  const postData = await postResponse.json()
+
+  return {
+    data: postData
+  }
+}
+
+onMounted(async () => {
+  const data = await requestMockServer()
+
+  console.log(data)
+
+})
+
 </script>
 
 <style>
